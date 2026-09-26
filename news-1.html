@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Latest News & Updates | Hon. Abraham Morah</title>
+
+  <meta name="description"
+        content="Latest news and updates from the office of Hon. Abraham Morah, Secretary, Ibaji Local Government Area, Kogi State.">
+
+  <meta name="theme-color" content="#b30000">
+
+  <!-- Social Media Preview -->
+  <meta property="og:title"
+        content="Latest News & Updates | Hon. Abraham Morah">
+
+  <meta property="og:description"
+        content="Latest news and updates from the office of Hon. Abraham Morah.">
+
+  <meta property="og:image"
+        content="https://i.ibb.co/r2q4kr1f/IMG-20260903-WA0058-1.jpg">
+
+  <meta property="og:type" content="article">
+
+  <meta property="og:url"
+        content="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY/news-1.html">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    /* TOP BAR */
+
+    .topbar {
+      background: #8f0000;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+
+    /* HEADER */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      text-decoration: none;
+      color: #8f0000;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+
+      background: #8f0000;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 12px;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #b30000;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      color: #8f0000;
+      cursor: pointer;
+    }
+
+    /* ARTICLE */
+
+    .article-section {
+      padding: 55px 20px 80px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .article-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+
+      box-shadow: 0 6px 25px rgba(0,0,0,0.09);
+    }
+
+    /* ARTICLE IMAGE */
+
+    .article-image {
+      width: 100%;
+      height: 500px;
+
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ARTICLE CONTENT */
+
+    .article-content {
+      padding: 40px;
+    }
+
+    .category {
+      display: inline-block;
+
+      background: #8f0000;
+      color: white;
+
+      padding: 6px 13px;
+      border-radius: 20px;
+
+      font-size: 11px;
+      font-weight: bold;
+
+      margin-bottom: 15px;
+    }
+
+    .article-content h1 {
+      color: #8f0000;
+
+      font-size: clamp(30px, 5vw, 48px);
+
+      line-height: 1.2;
+
+      margin-bottom: 15px;
+    }
+
+    .date {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .article-content p {
+      color: #444;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .article-content h2 {
+      color: #8f0000;
+      font-size: 26px;
+      margin: 30px 0 12px;
+    }
+
+    /* SHARE */
+
+    .share-section {
+      margin-top: 35px;
+      padding-top: 25px;
+
+      border-top: 1px solid #eee;
+    }
+
+    .share-section h3 {
+      color: #8f0000;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-block;
+
+      padding: 12px 18px;
+
+      border-radius: 5px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      border: none;
+      cursor: pointer;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .facebook {
+      background: #1877F2;
+      color: white;
+    }
+
+    .copy {
+      background: #eeeeee;
+      color: #333;
+    }
+
+    /* BACK BUTTON */
+
+    .back-button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      color: #8f0000;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #650000;
+      color: white;
+
+      text-align: center;
+
+      padding: 30px 20px;
+    }
+
+    footer p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 4px 0;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .article-image {
+        height: 300px;
+      }
+
+      .article-content {
+        padding: 25px;
+      }
+
+      .article-content p {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    Official Website | Ibaji Local Government Area, Kogi State
+
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav-container">
+
+      <a href="home.html" class="brand">
+
+        <div class="logo">
+          AM
+        </div>
+
+        <div class="brand-text">
+
+          <strong>
+            HON. ABRAHAM MORAH
+          </strong>
+
+          <span>
+            Secretary, Ibaji Local Government Area
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <div class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </div>
+
+
+      <nav id="navMenu">
+
+        <a href="home.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="biography.html">
+          Biography
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="news.html">
+          News
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ARTICLE -->
+
+  <main>
+
+    <section class="article-section">
+
+      <div class="container">
+
+        <article class="article-card">
+
+
+          <!-- NEWS IMAGE -->
+
+          <img
+            src="https://i.ibb.co/r2q4kr1f/IMG-20260903-WA0058-1.jpg"
+            alt="Hon. Abraham Morah"
+            class="article-image"
+          >
+
+
+          <!-- ARTICLE CONTENT -->
+
+          <div class="article-content">
+
+            <span class="category">
+              NEWS & UPDATES
+            </span>
+
+
+            <h1>
+              Latest News & Updates From Ibaji Local Government Area
+            </h1>
+
+
+            <div class="date">
+              Published: September 2026
+            </div>
+
+
+            <p>
+              This page is dedicated to publishing verified news,
+              announcements and official updates concerning the
+              office of Hon. Abraham Morah, Secretary of Ibaji Local
+              Government Area, Kogi State.
+            </p>
+
+
+            <p>
+              News stories published on this website may include
+              official activities, community engagements, meetings,
+              announcements and other relevant public service
+              information.
+            </p>
+
+
+            <h2>
+              About This News Platform
+            </h2>
+
+
+            <p>
+              The purpose of this platform is to make relevant
+              information accessible to residents, stakeholders and
+              members of the public.
+            </p>
+
+
+            <p>
+              Individual news reports will be published with their
+              respective photographs, dates, headlines and full
+              descriptions.
+            </p>
+
+
+            <!-- SHARE -->
+
+            <div class="share-section">
+
+              <h3>
+                Share This Story
+              </h3>
+
+
+              <div class="share-buttons">
+
+                <!-- WhatsApp -->
+
+                <a
+                  href="#"
+                  id="whatsappShare"
+                  target="_blank"
+                  class="share-btn whatsapp"
+                >
+                  WhatsApp
+                </a>
+
+
+                <!-- Facebook -->
+
+                <a
+                  href="#"
+                  id="facebookShare"
+                  target="_blank"
+                  class="share-btn facebook"
+                >
+                  Facebook
+                </a>
+
+
+                <!-- Copy -->
+
+                <button
+                  class="share-btn copy"
+                  onclick="copyArticleLink()"
+                >
+                  Copy Link
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="news.html"
+              class="back-button"
+            >
+              ← Back to News
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Hon. Abraham Morah. All Rights Reserved.
+    </p>
+
+    <p>
+      Secretary, Ibaji Local Government Area, Kogi State.
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navMenu")
+        .classList
+        .toggle("active");
+
+    }
+
+
+    /* SHARE LINK */
+
+    const pageUrl = window.location.href;
+
+    const pageTitle =
+      "Latest News & Updates From Ibaji Local Government Area";
+
+
+    document.getElementById("whatsappShare").href =
+      "https://wa.me/?text=" +
+      encodeURIComponent(pageTitle + "\n\n" + pageUrl);
+
+
+    document.getElementById("facebookShare").href =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(pageUrl);
+
+
+    /* COPY LINK */
+
+    function copyArticleLink() {
+
+      navigator.clipboard
+        .writeText(window.location.href)
+
+        .then(function() {
+
+          alert("News link copied successfully.");
+
+        })
+
+        .catch(function() {
+
+          alert(
+            "Please copy the news link from your browser."
+          );
+
+        });
+
+    }
+
+  </script>
+
+
+</body>
+</html>
