@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Hon. Abraham Morah</title>
+
+  <meta name="description" content="Official gallery page of Hon. Abraham Morah, Secretary, Ibaji Local Government Area, Kogi State.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #b30000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 15px;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 2px solid #b30000;
+      padding: 13px 8px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #b30000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 5px 8px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .hero h2 {
+      color: #b30000;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 50px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #b30000;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 35px;
+      color: #666;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    }
+
+    .placeholder {
+      height: 210px;
+      background: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .gallery-info {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .gallery-info h3 {
+      color: #b30000;
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .gallery-info p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .notice {
+      margin-top: 35px;
+      background: #f8f8f8;
+      border-left: 5px solid #b30000;
+      padding: 22px;
+      border-radius: 7px;
+      color: #555;
+    }
+
+    .button-area {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #b30000;
+      color: white;
+      padding: 12px 23px;
+      border-radius: 7px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #8f0000;
+    }
+
+    .outline-btn {
+      background: white;
+      color: #b30000;
+      border: 2px solid #b30000;
+    }
+
+    .outline-btn:hover {
+      background: #b30000;
+      color: white;
+    }
+
+    footer {
+      background: #8f0000;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 23px;
+      }
+
+      nav a {
+        font-size: 13px;
+        margin: 4px 5px;
+      }
+
+      .hero {
+        padding: 50px 18px;
+      }
+
+      .hero h2 {
+        font-size: 29px;
+      }
+
+      .section {
+        padding: 38px 14px;
+      }
+
+      .section-title {
+        font-size: 25px;
+      }
+
+      .placeholder {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>Hon. Abraham Morah</h1>
+
+    <p>
+      Secretary, Ibaji Local Government Area, Kogi State
+    </p>
+
+  </header>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="home.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="biography.html">Biography</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h2>Photo Gallery</h2>
+
+    <p>
+      Official photographs and images from activities
+      can be added to this gallery.
+    </p>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Gallery
+    </h2>
+
+    <p class="section-intro">
+      This gallery is prepared for official photographs
+      and activity images. Photos can be added when
+      they are ready for publication.
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Official Activity</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Community Engagement</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Public Service</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Official Meeting</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Stakeholder Engagement</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="placeholder">
+          PHOTO WILL BE ADDED
+        </div>
+
+        <div class="gallery-info">
+
+          <h3>Community Activity</h3>
+
+          <p>
+            Photograph to be added.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="notice">
+
+      <strong>Gallery Notice:</strong><br>
+
+      Official photographs can be added to this page
+      later. Each photograph should be accompanied by
+      an accurate caption and, where appropriate, the
+      date and location of the activity.
+
+    </div>
+
+    <div class="button-area">
+
+      <a href="news.html" class="btn">
+        View News
+      </a>
+
+      <a href="contact.html" class="btn outline-btn">
+        Contact
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      <strong>Hon. Abraham Morah</strong>
+    </p>
+
+    <p>
+      Secretary, Ibaji Local Government Area, Kogi State
+    </p>
+
+    <p>
+      &copy; 2026 Hon. Abraham Morah. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
