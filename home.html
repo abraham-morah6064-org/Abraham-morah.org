@@ -10,313 +10,535 @@
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #222;
       line-height: 1.6;
     }
 
-    /* HEADER */
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+      background: #850000;
+      color: #ffffff;
+      padding: 8px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       background: #b30000;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
+      color: #ffffff;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 6px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    header p {
-      font-size: 15px;
+    .brand-mark {
+      width: 55px;
+      height: 55px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
     }
 
-    /* NAVIGATION */
+    .brand h1 {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
+
+    .brand p {
+      font-size: 13px;
+      opacity: 0.95;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       background: #ffffff;
-      border-bottom: 2px solid #b30000;
-      padding: 13px 8px;
-      text-align: center;
+      border-bottom: 1px solid #dddddd;
+      padding: 0 6%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     nav a {
-      display: inline-block;
-      color: #b30000;
+      color: #7d0000;
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
-      margin: 5px 8px;
+      padding: 16px 13px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background: #b30000;
+      color: #ffffff;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      background: #f8f8f8;
+      min-height: 530px;
+      background:
+        linear-gradient(
+          rgba(90, 0, 0, 0.82),
+          rgba(179, 0, 0, 0.82)
+        );
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 70px 20px;
-      border-bottom: 1px solid #eeeeee;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .welcome-label {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.7);
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
     }
 
     .hero h2 {
-      color: #b30000;
-      font-size: 38px;
-      margin-bottom: 15px;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      font-weight: 800;
     }
 
     .hero h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .hero p {
-      max-width: 750px;
-      margin: 0 auto 25px;
-      color: #555;
-      font-size: 16px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 13px 24px;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .primary-btn {
-      background: #b30000;
-      color: white;
-    }
-
-    .secondary-btn {
-      background: white;
-      color: #b30000;
-      border: 2px solid #b30000;
-    }
-
-    .btn:hover {
-      opacity: 0.85;
-    }
-
-    /* INTRODUCTION */
-
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 18px;
-    }
-
-    .section-title {
-      text-align: center;
-      color: #b30000;
-      font-size: 28px;
-      margin-bottom: 35px;
-    }
-
-    .intro {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      color: #555;
-      font-size: 16px;
-    }
-
-    /* QUICK LINKS */
-
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 35px;
-    }
-
-    .quick-card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 28px 20px;
-      text-align: center;
-      background: white;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-    }
-
-    .quick-card .icon {
-      font-size: 35px;
-      margin-bottom: 12px;
-    }
-
-    .quick-card h3 {
-      color: #b30000;
-      margin-bottom: 8px;
-    }
-
-    .quick-card p {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .quick-card a {
-      display: inline-block;
-      background: #b30000;
-      color: white;
-      text-decoration: none;
-      padding: 9px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    /* NEWS PREVIEW */
-
-    .news-preview {
-      background: #f8f8f8;
-    }
-
-    .news-box {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      padding: 28px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-    }
-
-    .news-box span {
-      display: inline-block;
-      background: #b30000;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    .news-box h3 {
-      color: #b30000;
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .news-box p {
-      color: #555;
-      margin-bottom: 18px;
-    }
-
-    .news-box a {
-      display: inline-block;
-      background: #b30000;
-      color: white;
-      text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    /* CONTACT */
-
-    .contact-box {
-      text-align: center;
-      background: #b30000;
-      color: white;
-      border-radius: 12px;
-      padding: 40px 20px;
-    }
-
-    .contact-box h2 {
-      margin-bottom: 12px;
-    }
-
-    .contact-box p {
+      font-size: clamp(19px, 3vw, 27px);
+      font-weight: normal;
       margin-bottom: 20px;
     }
 
-    .contact-box a {
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-btn {
       display: inline-block;
-      background: white;
-      color: #b30000;
       text-decoration: none;
-      padding: 12px 23px;
-      border-radius: 7px;
-      font-weight: bold;
+      padding: 13px 25px;
+      border-radius: 6px;
       margin: 5px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    /* FOOTER */
+    .hero-btn.primary {
+      background: #ffffff;
+      color: #a00000;
+    }
 
-    footer {
-      background: #8f0000;
-      color: white;
+    .hero-btn.secondary {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .section {
+      padding: 75px 6%;
+    }
+
+    .section-header {
       text-align: center;
-      padding: 28px 15px;
+      max-width: 750px;
+      margin: 0 auto 45px;
     }
 
-    footer p {
-      margin: 5px 0;
+    .section-header span {
+      color: #b30000;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .section-header h2 {
+      color: #222222;
+      font-size: 34px;
+      margin: 8px 0 12px;
+    }
+
+    .section-header p {
+      color: #666666;
+      font-size: 16px;
+    }
+
+    /* =========================
+       ABOUT BLOCK
+    ========================= */
+
+    .about-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .profile-placeholder {
+      min-height: 360px;
+      border-radius: 12px;
+      background: #f3f3f3;
+      border: 2px dashed #c8c8c8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #999999;
+      padding: 30px;
+    }
+
+    .profile-placeholder div {
+      max-width: 250px;
+    }
+
+    .profile-placeholder strong {
+      display: block;
+      color: #b30000;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .about-content h2 {
+      color: #b30000;
+      font-size: 31px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      color: #555555;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      background: #b30000;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    /* =========================
+       SERVICE CARDS
+    ========================= */
+
+    .activities {
+      background: #f7f7f7;
+    }
+
+    .cards {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 10px;
+      border-top: 4px solid #b30000;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 13px;
+    }
+
+    .card h3 {
+      color: #b30000;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #666666;
       font-size: 14px;
     }
 
-    /* MOBILE */
+    /* =========================
+       NEWS
+    ========================= */
 
-    @media (max-width: 600px) {
+    .news-container {
+      max-width: 900px;
+      margin: auto;
+    }
 
-      header h1 {
-        font-size: 23px;
+    .news-card {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .news-label {
+      background: #b30000;
+      color: #ffffff;
+      padding: 9px 18px;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 20px 20px 5px;
+      border-radius: 4px;
+    }
+
+    .news-content {
+      padding: 10px 25px 28px;
+    }
+
+    .news-content h3 {
+      color: #222222;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .news-content p {
+      color: #666666;
+      margin-bottom: 18px;
+    }
+
+    .news-link {
+      color: #b30000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* =========================
+       CONTACT CTA
+    ========================= */
+
+    .contact-section {
+      background: #b30000;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      opacity: 0.95;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 23px;
+      border-radius: 6px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .call-btn {
+      background: #ffffff;
+      color: #a00000;
+    }
+
+    .whatsapp-btn {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #650000;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer h3 {
+      margin-bottom: 6px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin: 4px 0;
+      opacity: 0.9;
+    }
+
+    .footer-links {
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      margin: 0 7px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .top-bar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .top-bar span:last-child {
+        display: none;
+      }
+
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        justify-content: center;
       }
 
       nav a {
+        padding: 12px 8px;
         font-size: 13px;
-        margin: 4px 5px;
       }
 
-      .hero {
-        padding: 55px 18px;
+      .about-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero h2 {
-        font-size: 29px;
+      .profile-placeholder {
+        min-height: 280px;
       }
 
-      .hero h3 {
-        font-size: 19px;
+      .cards {
+        grid-template-columns: 1fr;
       }
 
       .section {
-        padding: 40px 14px;
+        padding: 55px 5%;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .brand-mark {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
       }
 
-      .section-title {
-        font-size: 25px;
+      .brand h1 {
+        font-size: 19px;
       }
 
-      .news-box {
-        padding: 22px;
+      .brand p {
+        font-size: 11px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 10px 6px;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 60px 18px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .section-header h2 {
+        font-size: 28px;
+      }
+
+      .about-content h2 {
+        font-size: 27px;
+      }
+
+      .news-content h3 {
+        font-size: 21px;
       }
     }
   </style>
@@ -324,16 +546,40 @@
 
 <body>
 
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    <span>Official Website • Ibaji Local Government Area</span>
+    <span>
+      <a href="tel:+2348064049446">+234 806 404 9446</a>
+    </span>
+  </div>
+
+
   <!-- HEADER -->
 
   <header>
-    <h1>Hon. Abraham Morah</h1>
-    <p>Secretary, Ibaji Local Government Area, Kogi State</p>
+
+    <div class="brand">
+
+      <div class="brand-mark">
+        AM
+      </div>
+
+      <div>
+        <h1>Hon. Abraham Morah</h1>
+        <p>Secretary, Ibaji Local Government Area, Kogi State</p>
+      </div>
+
+    </div>
+
   </header>
+
 
   <!-- NAVIGATION -->
 
   <nav>
+
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="biography.html">Biography</a>
@@ -341,173 +587,257 @@
     <a href="news.html">News</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+
   </nav>
+
 
   <!-- HERO -->
 
   <section class="hero">
 
-    <h2>Welcome</h2>
+    <div class="hero-content">
 
-    <h3>Hon. Abraham Morah</h3>
-
-    <p>
-      Secretary, Ibaji Local Government Area, Kogi State.
-      This platform provides information about official activities,
-      public service engagements, news and updates.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="about.html" class="btn primary-btn">
-        Learn More
-      </a>
-
-      <a href="contact.html" class="btn secondary-btn">
-        Contact
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- INTRODUCTION -->
-
-  <section class="section">
-
-    <h2 class="section-title">
-      About This Platform
-    </h2>
-
-    <p class="intro">
-      Welcome to the official website platform of Hon. Abraham Morah,
-      Secretary, Ibaji Local Government Area, Kogi State.
-      The website provides a central place for information,
-      official updates, activities and public communication.
-    </p>
-
-    <!-- QUICK LINKS -->
-
-    <div class="quick-links">
-
-      <div class="quick-card">
-
-        <div class="icon">👤</div>
-
-        <h3>Biography</h3>
-
-        <p>
-          Learn more about Hon. Abraham Morah.
-        </p>
-
-        <a href="biography.html">
-          View Biography
-        </a>
-
+      <div class="welcome-label">
+        WELCOME TO THE OFFICIAL WEBSITE
       </div>
 
-      <div class="quick-card">
-
-        <div class="icon">📋</div>
-
-        <h3>Projects</h3>
-
-        <p>
-          View projects and public service activities.
-        </p>
-
-        <a href="projects.html">
-          View Projects
-        </a>
-
-      </div>
-
-      <div class="quick-card">
-
-        <div class="icon">📰</div>
-
-        <h3>News</h3>
-
-        <p>
-          Read the latest news and updates.
-        </p>
-
-        <a href="news.html">
-          Read News
-        </a>
-
-      </div>
-
-      <div class="quick-card">
-
-        <div class="icon">📷</div>
-
-        <h3>Gallery</h3>
-
-        <p>
-          View official photographs and activities.
-        </p>
-
-        <a href="gallery.html">
-          View Gallery
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- LATEST NEWS -->
-
-  <section class="section news-preview">
-
-    <h2 class="section-title">
-      Latest News
-    </h2>
-
-    <div class="news-box">
-
-      <span>LATEST UPDATE</span>
+      <h2>Hon. Abraham Morah</h2>
 
       <h3>
-        Latest News & Updates From Ibaji Local Government Area
+        Secretary, Ibaji Local Government Area
       </h3>
 
       <p>
-        Stay informed about official activities, updates and
-        engagements associated with the office of Hon. Abraham Morah.
+        A platform for public information, official updates,
+        community engagement and activities relating to
+        Ibaji Local Government Area, Kogi State.
       </p>
 
-      <a href="news-1.html">
-        Read Full Story →
-      </a>
+      <div class="hero-buttons">
+
+        <a href="about.html" class="hero-btn primary">
+          Discover More
+        </a>
+
+        <a href="news.html" class="hero-btn secondary">
+          Latest News
+        </a>
+
+      </div>
 
     </div>
 
   </section>
 
-  <!-- CONTACT -->
+
+  <!-- ABOUT -->
 
   <section class="section">
 
-    <div class="contact-box">
+    <div class="section-header">
 
-      <h2>Get in Touch</h2>
+      <span>About The Office</span>
+
+      <h2>Serving Ibaji Through Public Service</h2>
 
       <p>
-        For official enquiries and communication,
-        contact Hon. Abraham Morah through the available channel.
+        Learn more about the office and the public-service
+        role of Hon. Abraham Morah.
       </p>
 
-      <a href="tel:+2348064049446">
-        📞 Call +234 806 404 9446
+    </div>
+
+
+    <div class="about-grid">
+
+      <!-- PHOTO SPACE -->
+
+      <div class="profile-placeholder">
+
+        <div>
+
+          <strong>Official Photograph</strong>
+
+          Photograph will be added here.
+
+        </div>
+
+      </div>
+
+
+      <!-- TEXT -->
+
+      <div class="about-content">
+
+        <h2>Hon. Abraham Morah</h2>
+
+        <p>
+          Hon. Abraham Morah serves as Secretary of
+          Ibaji Local Government Area, Kogi State.
+        </p>
+
+        <p>
+          This official website provides a central platform
+          for sharing information, news, activities and
+          public-service updates.
+        </p>
+
+        <p>
+          The platform will continue to be updated with
+          verified information and official activities.
+        </p>
+
+        <a href="biography.html" class="read-more">
+          Read Biography →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACTIVITIES -->
+
+  <section class="section activities">
+
+    <div class="section-header">
+
+      <span>Public Service</span>
+
+      <h2>Information & Activities</h2>
+
+      <p>
+        Explore the different sections of the website
+        dedicated to public information and activities.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="card-icon">🏛️</div>
+
+        <h3>Local Government</h3>
+
+        <p>
+          Information relating to the administration
+          and activities of Ibaji Local Government Area.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🤝</div>
+
+        <h3>Community Engagement</h3>
+
+        <p>
+          A platform for documenting verified community
+          engagements and stakeholder activities.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">📋</div>
+
+        <h3>Projects & Activities</h3>
+
+        <p>
+          View verified projects, programmes and
+          public-service activities as they are added.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NEWS -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <span>News & Updates</span>
+
+      <h2>Latest News</h2>
+
+      <p>
+        Stay informed about official news and updates.
+      </p>
+
+    </div>
+
+
+    <div class="news-container">
+
+      <div class="news-card">
+
+        <div class="news-label">
+          LATEST NEWS
+        </div>
+
+        <div class="news-content">
+
+          <h3>
+            Latest News & Updates From Ibaji
+            Local Government Area
+          </h3>
+
+          <p>
+            Read the latest published story and
+            official updates relating to Ibaji.
+          </p>
+
+          <a href="news-1.html" class="news-link">
+            Read Full Story →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact-section">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+      For official enquiries and communication,
+      please use the available contact information.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a
+        href="tel:+2348064049446"
+        class="call-btn">
+        📞 Call Office
       </a>
 
       <a
         href="https://wa.me/2348064049446"
         target="_blank"
-        rel="noopener">
+        rel="noopener"
+        class="whatsapp-btn">
         💬 WhatsApp
       </a>
 
@@ -515,17 +845,26 @@
 
   </section>
 
+
   <!-- FOOTER -->
 
   <footer>
 
-    <p>
-      <strong>Hon. Abraham Morah</strong>
-    </p>
+    <h3>Hon. Abraham Morah</h3>
 
     <p>
       Secretary, Ibaji Local Government Area, Kogi State
     </p>
+
+    <div class="footer-links">
+
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
 
     <p>
       &copy; 2026 Hon. Abraham Morah. All Rights Reserved.
