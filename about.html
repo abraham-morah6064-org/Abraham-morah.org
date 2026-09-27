@@ -23,7 +23,6 @@
     }
 
     /* HEADER */
-
     header {
       background: #b30000;
       color: white;
@@ -41,7 +40,6 @@
     }
 
     /* NAVIGATION */
-
     nav {
       background: #ffffff;
       border-bottom: 2px solid #b30000;
@@ -66,7 +64,6 @@
     }
 
     /* HERO */
-
     .hero {
       background: #f8f8f8;
       text-align: center;
@@ -88,7 +85,6 @@
     }
 
     /* MAIN CONTENT */
-
     .section {
       max-width: 1000px;
       margin: auto;
@@ -114,7 +110,8 @@
     .content-box h3 {
       color: #b30000;
       font-size: 22px;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      text-align: center;
     }
 
     .content-box p {
@@ -122,8 +119,30 @@
       margin-bottom: 15px;
     }
 
-    /* INFORMATION CARDS */
+    /* PROFILE PHOTO */
+    .profile-area {
+      text-align: center;
+      margin-bottom: 28px;
+    }
 
+    .profile-image {
+      width: 230px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 5px solid #b30000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .photo-caption {
+      color: #777;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* INFORMATION CARDS */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -156,7 +175,6 @@
     }
 
     /* LINK BUTTONS */
-
     .button-area {
       text-align: center;
       margin-top: 35px;
@@ -189,7 +207,6 @@
     }
 
     /* FOOTER */
-
     footer {
       background: #8f0000;
       color: white;
@@ -204,7 +221,6 @@
     }
 
     /* MOBILE */
-
     @media (max-width: 600px) {
 
       header h1 {
@@ -235,6 +251,11 @@
       .content-box {
         padding: 23px 18px;
       }
+
+      .profile-image {
+        width: 200px;
+        height: 250px;
+      }
     }
   </style>
 </head>
@@ -252,6 +273,7 @@
     </p>
 
   </header>
+
 
   <!-- NAVIGATION -->
 
@@ -273,6 +295,7 @@
 
   </nav>
 
+
   <!-- HERO -->
 
   <section class="hero">
@@ -286,11 +309,30 @@
 
   </section>
 
+
   <!-- ABOUT CONTENT -->
 
   <section class="section">
 
     <div class="content-box">
+
+      <!-- PROFILE PHOTO -->
+
+      <div class="profile-area">
+
+        <img
+          src="https://i.ibb.co/SShL31R/00000000069082108d7d1069d9e2cbc7"
+          alt="Hon. Abraham Morah"
+          class="profile-image"
+        >
+
+        <div class="photo-caption">
+          Hon. Abraham Morah<br>
+          Secretary, Ibaji Local Government Area
+        </div>
+
+      </div>
+
 
       <h3>Hon. Abraham Morah</h3>
 
@@ -314,11 +356,13 @@
 
     </div>
 
+
     <!-- WEBSITE PURPOSE -->
 
     <h2 class="section-title">
       About This Website
     </h2>
+
 
     <div class="info-grid">
 
@@ -335,6 +379,7 @@
 
       </div>
 
+
       <div class="info-card">
 
         <div class="icon">📋</div>
@@ -348,6 +393,7 @@
 
       </div>
 
+
       <div class="info-card">
 
         <div class="icon">📷</div>
@@ -360,6 +406,7 @@
         </p>
 
       </div>
+
 
       <div class="info-card">
 
@@ -375,6 +422,7 @@
       </div>
 
     </div>
+
 
     <!-- NAVIGATION BUTTONS -->
 
@@ -395,6 +443,7 @@
     </div>
 
   </section>
+
 
   <!-- FOOTER -->
 
