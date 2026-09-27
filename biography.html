@@ -22,6 +22,7 @@
       line-height: 1.7;
     }
 
+    /* HEADER */
     header {
       background: #b30000;
       color: white;
@@ -38,6 +39,7 @@
       font-size: 15px;
     }
 
+    /* NAVIGATION */
     nav {
       background: #ffffff;
       border-bottom: 2px solid #b30000;
@@ -61,6 +63,7 @@
       text-decoration: underline;
     }
 
+    /* HERO */
     .hero {
       background: #f8f8f8;
       text-align: center;
@@ -81,19 +84,61 @@
       font-size: 16px;
     }
 
+    /* MAIN SECTION */
     .section {
       max-width: 950px;
       margin: auto;
       padding: 50px 18px;
     }
 
-    .section-title {
+    /* PROFILE PHOTO */
+    .photo-section {
       text-align: center;
-      color: #b30000;
-      font-size: 28px;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
+    .profile-image {
+      width: 250px;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
+      border-radius: 15px;
+      border: 5px solid #b30000;
+      box-shadow: 0 7px 22px rgba(0,0,0,0.18);
+    }
+
+    .photo-name {
+      color: #b30000;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .photo-position {
+      color: #666;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+
+    /* PROFILE INFORMATION */
+    .profile-box {
+      background: #f8f8f8;
+      border-left: 5px solid #b30000;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .profile-box p {
+      margin: 7px 0;
+      color: #444;
+    }
+
+    .profile-box strong {
+      color: #b30000;
+    }
+
+    /* BIO CARDS */
     .bio-card {
       background: #ffffff;
       border: 1px solid #dddddd;
@@ -114,23 +159,7 @@
       margin-bottom: 16px;
     }
 
-    .profile-box {
-      background: #f8f8f8;
-      border-left: 5px solid #b30000;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-    }
-
-    .profile-box p {
-      margin: 7px 0;
-      color: #444;
-    }
-
-    .profile-box strong {
-      color: #b30000;
-    }
-
+    /* BUTTONS */
     .button-area {
       text-align: center;
       margin-top: 35px;
@@ -162,6 +191,7 @@
       color: white;
     }
 
+    /* FOOTER */
     footer {
       background: #8f0000;
       color: white;
@@ -175,6 +205,7 @@
       font-size: 14px;
     }
 
+    /* MOBILE */
     @media (max-width: 600px) {
 
       header h1 {
@@ -198,12 +229,17 @@
         padding: 38px 14px;
       }
 
-      .bio-card {
-        padding: 23px 18px;
+      .profile-image {
+        width: 210px;
+        height: 265px;
       }
 
-      .section-title {
-        font-size: 25px;
+      .photo-name {
+        font-size: 21px;
+      }
+
+      .bio-card {
+        padding: 23px 18px;
       }
     }
   </style>
@@ -222,6 +258,7 @@
     </p>
 
   </header>
+
 
   <!-- NAVIGATION -->
 
@@ -243,6 +280,7 @@
 
   </nav>
 
+
   <!-- HERO -->
 
   <section class="hero">
@@ -256,18 +294,44 @@
 
   </section>
 
-  <!-- BIOGRAPHY -->
+
+  <!-- BIOGRAPHY CONTENT -->
 
   <section class="section">
+
+    <!-- PHOTO -->
+
+    <div class="photo-section">
+
+      <img
+        src="https://i.ibb.co/SShL31R/00000000069082108d7d1069d9e2cbc7"
+        alt="Hon. Abraham Morah"
+        class="profile-image"
+      >
+
+      <div class="photo-name">
+        Hon. Abraham Morah
+      </div>
+
+      <div class="photo-position">
+        Secretary, Ibaji Local Government Area, Kogi State
+      </div>
+
+    </div>
+
+
+    <!-- PROFILE -->
 
     <div class="profile-box">
 
       <p>
-        <strong>Name:</strong> Hon. Abraham Morah
+        <strong>Name:</strong>
+        Hon. Abraham Morah
       </p>
 
       <p>
-        <strong>Position:</strong> Secretary
+        <strong>Position:</strong>
+        Secretary
       </p>
 
       <p>
@@ -276,10 +340,14 @@
       </p>
 
       <p>
-        <strong>State:</strong> Kogi State, Nigeria
+        <strong>State:</strong>
+        Kogi State, Nigeria
       </p>
 
     </div>
+
+
+    <!-- PUBLIC SERVICE -->
 
     <div class="bio-card">
 
@@ -298,6 +366,9 @@
       </p>
 
     </div>
+
+
+    <!-- COMMITMENT -->
 
     <div class="bio-card">
 
@@ -319,6 +390,9 @@
 
     </div>
 
+
+    <!-- OFFICIAL INFORMATION -->
+
     <div class="bio-card">
 
       <h3>Official Information</h3>
@@ -335,6 +409,7 @@
       </p>
 
     </div>
+
 
     <!-- BUTTONS -->
 
@@ -355,6 +430,7 @@
     </div>
 
   </section>
+
 
   <!-- FOOTER -->
 
